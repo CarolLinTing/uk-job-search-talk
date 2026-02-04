@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>愛丁堡求職地圖：給 1.5 年前的自己</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+
+    .reveal { font-family: 'Noto Sans TC', sans-serif; color: #2c3e50; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: 'Noto Sans TC', sans-serif; text-transform: none; font-weight: 700; }
+    .reveal h1 { font-size: 2.5em; color: #1e3a8a; }
+    .reveal h2 { font-size: 1.85em; color: #1e40af; }
+    .reveal h3 { font-size: 1.2em; color: #4b5563; }
+
+    .highlight { color: #dc2626; font-weight: bold; }
+    .accent-bg { background-color: #f3f4f6; border-radius: 16px; padding: 20px; }
+
+    .circle-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 80px; height: 80px; border-radius: 50%;
+      background-color: #e0f2fe; color: #0369a1;
+      margin-bottom: 12px; font-size: 2rem;
+    }
+
+    /* timeline */
+    .timeline-item { position: relative; padding: 18px 18px 18px 22px; border-left: 3px solid #cbd5e1; margin-left: 18px; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -10px; top: 26px;
+      width: 17px; height: 17px; border-radius: 50%;
+      background-color: #3b82f6;
+    }
+
+    /* funnel */
+    .funnel-step { margin: 6px auto; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; border-radius: 6px; }
+
+    /* ensure small text stays readable on projector */
+    .min-readable { font-size: 18px; }
+
+    /* ===== Takeaway: fixed to bottom, never cover content ===== */
+    .reveal section { position: relative; }
+    .has-takeaway { padding-bottom: 110px !important; } /* reserve space so content won't be covered */
+
+    .takeaway {
+      position: absolute;
+      left: 40px;
+      right: 40px;
+      bottom: 18px;
+      font-size: 18px;
+      color: rgba(30, 64, 175, 0.9);
+      background: rgba(239, 246, 255, 0.75);
+      border: 1px solid rgba(191, 219, 254, 0.95);
+      border-radius: 12px;
+      padding: 10px 14px;
+      backdrop-filter: blur(2px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Cover -->
+      <section data-background-color="#eff6ff">
+        <div class="flex flex-col items-center justify-center h-full">
+          <div class="mb-6 text-6xl text-blue-800">
+            <i class="fa-solid fa-earth-europe"></i>
+          </div>
+          <h1>在英國找工作</h1>
+          <h3 class="mt-4 text-gray-600">給 1.5 年前的自己的一封信</h3>
+          <div class="mt-12 border-t-2 border-blue-200 pt-6">
+            <p class="text-xl">愛丁堡台灣同學會分享</p>
+            <p class="text-lg text-gray-500 mt-2">By Carol Lin</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 2: Who am I -->
+      <section class="has-takeaway">
+        <h2>我是誰？</h2>
+
+        <div class="grid grid-cols-2 gap-8 mt-10 items-center">
+          <div class="text-left space-y-4 min-readable">
+            <div class="p-6 bg-blue-50 rounded-xl shadow-sm">
+              <i class="fa-solid fa-briefcase text-blue-500 mr-2"></i>
+              <span class="font-bold">現職：</span> Lloyds Banking Group / Software Engineer
+            </div>
+            <div class="p-6 bg-blue-50 rounded-xl shadow-sm">
+              <i class="fa-solid fa-clock text-blue-500 mr-2"></i>
+              <span class="font-bold">英國工作經驗：</span> 1 年 5 個月
+            </div>
+            <div class="p-6 bg-blue-50 rounded-xl shadow-sm">
+              <i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i>
+              <span class="font-bold">碩士入學：</span> 2022 Sep
+            </div>
+            <div class="p-6 bg-blue-50 rounded-xl shadow-sm">
+              <i class="fa-solid fa-person-circle-question text-blue-500 mr-2"></i>
+              <span class="font-bold">起步狀態：</span> 從零開始、投遞很多次、一路摸索（踩過雷也有收穫）
+            </div>
+          </div>
+
+          <div class="accent-bg text-center min-readable">
+            <p class="text-2xl font-bold mb-4 text-gray-700">關於我</p>
+            <div class="flex flex-wrap gap-2 justify-center">
+              <span class="px-4 py-2 bg-white rounded-full text-base shadow text-gray-600">#一路摸索中</span>
+              <span class="px-4 py-2 bg-white rounded-full text-base shadow text-gray-600">#投遞很多次</span>
+              <span class="px-4 py-2 bg-white rounded-full text-base shadow text-gray-600">#邊做邊學</span>
+              <span class="px-4 py-2 bg-white rounded-full text-base shadow text-gray-600">#實戰踩雷筆記</span>
+            </div>
+            <p class="mt-6 text-base text-gray-700 leading-relaxed">
+              「今天想用學姊／過來人的角度，<br>
+              分享我在英國找工作的經驗：哪些有用、哪些會踩雷。<br>
+              希望讓你們少花一點冤枉時間，走得更順。」
+            </p>
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：今天不追求「完美答案」，只追求「少走彎路」。
+        </div>
+      </section>
+
+      <!-- Slide 3: Agenda / Roadmap -->
+      <section data-background-color="#f8fafc" class="has-takeaway">
+        <h2>今天我們會走的路線圖</h2>
+        <p class="text-gray-600 min-readable mt-4">你可以把它當成「在英國找工作的導航」。</p>
+
+        <div class="grid grid-cols-2 gap-6 mt-10 min-readable">
+          <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+            <div class="text-blue-700 font-bold text-xl mb-2">
+              <i class="fa-solid fa-compass mr-2"></i> ① 留不留：成本與現實
+            </div>
+            <div class="text-gray-600">想不想、付不付得起、值不值得。</div>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+            <div class="text-blue-700 font-bold text-xl mb-2">
+              <i class="fa-solid fa-passport mr-2"></i> ② 怎麼留：簽證＋策略
+            </div>
+            <div class="text-gray-600">PSW 怎麼用、工簽怎麼鋪路。</div>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+            <div class="text-blue-700 font-bold text-xl mb-2">
+              <i class="fa-solid fa-file-lines mr-2"></i> ③ 怎麼上岸：CV / 面試 / 漏斗
+            </div>
+            <div class="text-gray-600">把機率做大，讓面試來找你。</div>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+            <div class="text-blue-700 font-bold text-xl mb-2">
+              <i class="fa-solid fa-people-group mr-2"></i> ④ 上岸後：文化＋長期規劃
+            </div>
+            <div class="text-gray-600">英國職場怎麼活、PSW 後怎麼想。</div>
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：這不是「求職課」，是「你走在路上會用到的地圖」。
+        </div>
+      </section>
+
+      <!-- Slide 4: Timeline -->
+      <section class="has-takeaway">
+        <h2>碩士的「時光飛逝」</h2>
+        <p class="text-gray-600 min-readable mb-6">如果你覺得時間還很多，請看這張圖…（真的一下就過了）</p>
+
+        <div class="text-left mx-auto w-3/4 min-readable">
+          <div class="timeline-item fragment fade-up">
+            <span class="font-bold text-blue-600">9月 - 10月</span>
+            <p>剛抵達愛丁堡，超興奮！Welcome Week、Calton Hill 看夕陽。</p>
+          </div>
+          <div class="timeline-item fragment fade-up">
+            <span class="font-bold text-blue-600">11月 - 12月</span>
+            <p>天黑得很早，Assessment 來襲。聖誕市集好香，但也開始緊張。</p>
+          </div>
+          <div class="timeline-item fragment fade-up">
+            <span class="font-bold text-red-500">3月 - 4月</span>
+            <p>論文地獄／分組報告加速，你開始覺得：「我根本沒空找工作？」</p>
+          </div>
+          <div class="timeline-item fragment fade-up">
+            <span class="font-bold text-red-600">6月 - 8月</span>
+            <p>寫完論文才驚覺：<br>
+              <span class="bg-yellow-200 px-2">等等…我 PSW / 簽證什麼時候要處理？</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：求職不是最後兩個月才開始，是一開始就要佈局（先把方向搞清楚）。
+        </div>
+      </section>
+
+      <!-- Slide 5: To Stay or Not to Stay -->
+      <section class="has-takeaway">
+        <h2>靈魂拷問：真的要留下來嗎？</h2>
+
+        <div class="grid grid-cols-2 gap-6 mt-8 min-readable">
+          <div class="p-6 bg-white border-2 border-pink-100 rounded-xl fragment fade-up">
+            <h3 class="text-pink-600 mb-4"><i class="fa-solid fa-heart"></i> 美好的想像</h3>
+            <ul class="text-left space-y-2">
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>英式生活與下午茶</li>
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>歐洲旅遊超方便</li>
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>國際職涯履歷加分</li>
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>英文環境成長很快</li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-gray-100 rounded-xl fragment fade-up">
+            <h3 class="text-gray-700 mb-4"><i class="fa-solid fa-sack-dollar"></i> 殘酷的成本</h3>
+            <ul class="text-left space-y-2">
+              <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>房租＋生活費壓力很真</li>
+              <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>存錢不一定比台灣多</li>
+              <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>孤獨感：同學回國後週末很空</li>
+              <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>文化差異：有時候會覺得疏離</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mt-8 text-xl font-bold text-blue-900 fragment fade-up">
+          留下來不是為了「贏」，而是你想怎麼「活」這幾年。
+        </p>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：留下或回去都不是輸贏題，是你願不願意承擔那條路的成本。
+        </div>
+      </section>
+
+      <!-- Slide 6: Visa Strategy -->
+      <section class="has-takeaway">
+        <h2>簽證策略：別自己把路走窄了</h2>
+
+        <div class="mt-8 space-y-6 min-readable">
+          <div class="flex items-center p-5 bg-red-50 rounded-xl border border-red-100">
+            <div class="w-1/4 text-red-800 font-bold">Skilled Worker</div>
+            <div class="w-3/4 text-left">
+              <div class="font-bold">難度：⭐⭐⭐⭐⭐</div>
+              <div class="text-gray-700 mt-1">
+                公司要花錢擔保你，所以會更挑。工程師／醫療／金融等職類較常見，
+                <span class="font-semibold">但不是只有這些</span>。
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center p-6 bg-green-100 rounded-xl shadow-lg border-2 border-green-500">
+            <div class="w-1/4 text-green-900 font-bold text-xl">
+              <i class="fa-solid fa-star"></i> PSW
+            </div>
+            <div class="w-3/4 text-left">
+              <div class="font-bold text-xl mb-2">PSW 是「時間」，不是保證。</div>
+              <ul class="list-disc pl-5 space-y-1 text-gray-800">
+                <li>給你一段緩衝期，先進職場累積「證據」。</li>
+                <li>公司<span class="font-bold text-red-700">不需要</span>一開始就 sponsor 你。</li>
+                <li>策略：先用 PSW 進去 → 做出成果 → 再談工簽機率更高。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：PSW 要用來累積「公司願意 sponsor 你的理由」（成果＋信任＋可替代性低）。
+        </div>
+      </section>
+
+      <!-- Slide 7: UK vs TW -->
+      <section class="has-takeaway">
+        <h2>英國找工作 vs 台灣找工作：哪裡不一樣？</h2>
+        <p class="text-gray-600 min-readable mt-3">這頁是為了讓你少踩雷：不是你不夠好，是遊戲規則不同。</p>
+
+        <div class="grid grid-cols-2 gap-6 mt-10 min-readable">
+          <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div class="font-bold text-xl text-blue-800 mb-3">
+              <i class="fa-solid fa-flag-uk mr-2"></i>英國常見
+            </div>
+            <ul class="space-y-2 text-gray-800">
+              <li>• CV 要對 JD 微調（關鍵字＋成果）</li>
+              <li>• 行為面試：STAR「故事」要講完整</li>
+              <li>• Culture fit：能不能一起合作很重要</li>
+              <li>• 先刷資格：簽證、經驗、關鍵字常被先篩掉</li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-gray-50 rounded-xl border border-slate-200 shadow-sm">
+            <div class="font-bold text-xl text-blue-800 mb-3">
+              <i class="fa-solid fa-flag mr-2"></i>台灣常見（相對）
+            </div>
+            <ul class="space-y-2 text-gray-800">
+              <li>• 一份履歷可能投很多家也能用</li>
+              <li>• 有時候更看人脈／學校／年資</li>
+              <li>• 面試更常追問技術細節（依產業）</li>
+              <li>• 內推/介紹的影響力常更大</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：在英國求職，你要做的是「讓機器與人都能快速看懂你適合」。
+        </div>
+      </section>
+
+      <!-- Slide 8: Funnel -->
+      <section class="has-takeaway">
+        <h2>我的求職數據漏斗</h2>
+        <p class="min-readable text-gray-700 mb-6">
+          這是為了治療大家的焦慮：這是機率，不是你不夠好。
+        </p>
+
+        <div class="flex flex-col items-center w-2/3 mx-auto min-readable">
+          <div class="funnel-step bg-gray-400 w-full py-4 fragment fade-in">投遞履歷：100+ 封</div>
+          <div class="funnel-step bg-gray-500 w-3/4 py-4 fragment fade-in">拒信 / 無聲卡：80+ 封</div>
+          <div class="funnel-step bg-blue-500 w-1/2 py-4 fragment fade-in">面試機會：2 家</div>
+          <div class="funnel-step bg-green-500 w-1/4 py-4 fragment fade-in shadow-xl">Offer：1 個</div>
+        </div>
+
+        <div class="mt-8 p-5 bg-yellow-50 rounded-xl text-gray-800 min-readable border border-yellow-200">
+          <i class="fa-solid fa-lightbulb text-yellow-600 mr-2"></i>
+          <span class="font-bold">小結：</span>失敗是常態。只要有一個 Yes，前面的 No 都不重要了。
+          <div class="mt-2 text-gray-700">所以重點不是「每封都中」，是把分母做大，讓面試慢慢出現。</div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：別把拒信當成評價，把它當成「機率過程的一部分」。
+        </div>
+      </section>
+
+      <!-- Slide 9: CV Tips -->
+      <section class="has-takeaway">
+        <h2>CV 避雷針：ATS 機器人看不懂美感</h2>
+
+        <div class="grid grid-cols-2 gap-8 mt-8 min-readable">
+          <div class="p-5 border-2 border-red-200 rounded-xl bg-red-50/30">
+            <h3 class="text-red-600 text-xl mb-3"><i class="fa-solid fa-circle-xmark"></i> NG 版本</h3>
+            <div class="bg-gray-100 h-40 flex items-center justify-center text-gray-500 mb-3 rounded">
+              (花俏 Canva 模板 / 雙欄 / 技能進度條)
+            </div>
+            <ul class="text-left space-y-2 text-red-900">
+              <li>❌ 放照片 / 身高體重 / 生日</li>
+              <li>❌ Skill bar 這種「美感型能力」</li>
+              <li>❌ 雙欄式複雜排版（機器讀不到）</li>
+              <li>❌ 錯字（很多公司直接淘汰）</li>
+            </ul>
+          </div>
+
+          <div class="p-5 border-2 border-green-500 rounded-xl shadow-lg bg-white">
+            <h3 class="text-green-700 text-xl mb-3"><i class="fa-solid fa-circle-check"></i> OK 版本</h3>
+            <div class="bg-white border h-40 flex items-center justify-center text-gray-500 mb-3 rounded">
+              (白底黑字、條列式、清楚對齊)
+            </div>
+            <ul class="text-left space-y-2 text-green-900">
+              <li>✅ 一頁為主（graduate / junior 常見）</li>
+              <li>✅ 關鍵字對應 JD（ATS 先過）</li>
+              <li>✅ 用數字說成果：Improved X by 20%</li>
+              <li>✅ 每個職缺做「小幅微調」就好</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：你的 CV 不是在「展示你多厲害」，是要讓對方「一眼看懂你能解決什麼問題」。
+        </div>
+      </section>
+
+      <!-- Slide 10: STAR Method -->
+      <section class="has-takeaway">
+        <h2>面試心法：STAR 原則</h2>
+        <p class="min-readable text-gray-700 mb-6">
+          英國面試不聽「我很努力」，他們要聽「你做了什麼、結果是什麼」。
+          <span class="font-semibold">而且很多時候他們不會追問，所以你要自己講完整。</span>
+        </p>
+
+        <div class="grid grid-cols-4 gap-4 min-readable">
+          <div class="fragment fade-up">
+            <div class="circle-icon bg-red-100 text-red-600">S</div>
+            <h4 class="text-lg font-bold">Situation</h4>
+            <p>發生了什麼？（情境）</p>
+          </div>
+
+          <div class="fragment fade-up">
+            <div class="circle-icon bg-yellow-100 text-yellow-700">T</div>
+            <h4 class="text-lg font-bold">Task</h4>
+            <p>你的目標是什麼？</p>
+          </div>
+
+          <div class="fragment fade-up transform scale-110">
+            <div class="circle-icon bg-green-100 text-green-700 border-4 border-green-200">A</div>
+            <h4 class="text-lg font-bold text-green-800">Action</h4>
+            <p class="font-bold">你做了什麼？（重點 70%）</p>
+          </div>
+
+          <div class="fragment fade-up">
+            <div class="circle-icon bg-blue-100 text-blue-700">R</div>
+            <h4 class="text-lg font-bold">Result</h4>
+            <p>結果如何？（數據/反思）</p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-left bg-gray-50 p-5 rounded-xl min-readable border border-slate-200">
+          <div class="italic text-gray-700">
+            Example: "Tell me about a time you handled a conflict in a team..."
+          </div>
+          <div class="mt-2 text-gray-700">
+            小技巧：你在寫論文 / 做分組報告時，就把故事先記下來（之後面試直接拿來用）。
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：面試不是「背答案」，是「講一個你能合作、能解決問題的證據故事」。
+        </div>
+      </section>
+
+      <!-- Slide 11: Language -->
+      <section class="has-takeaway">
+        <h2>英文不好？很多時候是「敢不敢」的問題</h2>
+
+        <div class="flex flex-col gap-6 mt-8 min-readable">
+          <div class="flex items-start space-x-4 fragment fade-up">
+            <div class="text-4xl text-blue-300"><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="text-left">
+              <h4 class="font-bold text-xl">聽不懂蘇格蘭口音怎麼辦？</h4>
+              <p class="text-gray-700 mt-1">
+                “Sorry, could you say that again?” / “Pardon?” 是你的好朋友。<br>
+                <span class="font-semibold">聽不清楚就問，是專業。</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4 fragment fade-up">
+            <div class="text-4xl text-blue-300"><i class="fa-solid fa-volume-high"></i></div>
+            <div class="text-left">
+              <h4 class="font-bold text-xl">溝通 > 文法</h4>
+              <p class="text-gray-700 mt-1">
+                職場上在乎的是「能不能把事情推進」，不是你的時態完美不完美。<br>
+                自信（Confidence）也是語言能力的一部分。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 fragment fade-up">
+            <div class="font-bold text-blue-900 mb-2">新人救命三連發（直接拿去用）</div>
+            <div class="text-gray-800 leading-relaxed">
+              • “Could you repeat that a bit slower?”<br>
+              • “Let me make sure I understood…”<br>
+              • “I’ll summarise what we’ve decided.”
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Slide 12: Work Culture -->
+      <section class="has-takeaway">
+        <h2>職場生存：菜鳥觀察日記（含避雷）</h2>
+
+        <div class="grid grid-cols-3 gap-5 mt-10 min-readable">
+          <div class="p-5 bg-white shadow-lg rounded-xl fragment fade-up border border-slate-100">
+            <div class="text-4xl text-orange-400 mb-2"><i class="fa-solid fa-mug-hot"></i></div>
+            <h4 class="font-bold text-xl mb-2">Tea Break</h4>
+            <p class="text-gray-700">
+              這是情報交換中心。<br>
+              但也別只聊八卦：讓大家覺得你<span class="font-semibold">好相處又可靠</span>。
+            </p>
+          </div>
+
+          <div class="p-5 bg-white shadow-lg rounded-xl fragment fade-up border border-slate-100">
+            <div class="text-4xl text-blue-400 mb-2"><i class="fa-solid fa-cloud-rain"></i></div>
+            <h4 class="font-bold text-xl mb-2">Small Talk</h4>
+            <p class="text-gray-700">
+              不知道聊什麼就聊：天氣＋週末。<br>
+              避雷：一開始先別聊政治、簽證、薪水。
+            </p>
+          </div>
+
+          <div class="p-5 bg-white shadow-lg rounded-xl fragment fade-up border border-slate-100">
+            <div class="text-4xl text-purple-400 mb-2"><i class="fa-solid fa-users"></i></div>
+            <h4 class="font-bold text-xl mb-2">Networking</h4>
+            <p class="text-gray-700">
+              不是攀關係，是 Coffee Chat。<br>
+              建議從同 team/同 department 先開始，最自然也最有效。
+            </p>
+          </div>
+        </div>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：在英國職場，「會做事」很重要，但「讓人放心跟你合作」更重要。
+        </div>
+      </section>
+
+      <!-- Slide 13: Conclusion -->
+      <section data-background-color="#1e3a8a">
+        <h2 class="text-white">給學弟妹的一句話</h2>
+
+        <div class="mt-12 px-10">
+          <p class="text-3xl font-light leading-relaxed text-white">
+            「這一年半，我學到最多的不是工作技能，<br>
+            而是學會怎麼在異鄉<span class="text-yellow-300 font-bold">照顧自己</span>、<br>
+            怎麼在無數次被拒絕後<span class="text-yellow-300 font-bold">重新站起來</span>。」
+          </p>
+        </div>
+
+        <div class="mt-12 text-xl text-blue-100 leading-relaxed">
+          無論最後是留下來還是回台灣，<br>
+          這段在愛丁堡的日子，本身就是勳章。
+        </div>
+
+        <div class="mt-10 mx-10 bg-white/10 border border-white/20 rounded-2xl p-5 text-white text-lg">
+          ✅ Takeaway：職涯不是直線。你只要比昨天更清楚「下一步」就很好。
+        </div>
+      </section>
+
+      <!-- Slide 14: Q&A -->
+      <section class="has-takeaway">
+        <h1>Q & A</h1>
+        <p class="text-gray-700 mt-4 min-readable">
+          任何問題都可以問！<br>
+          （簽證、履歷、面試雷點、第一份工作怎麼選、卡關怎麼辦）
+        </p>
+
+        <div class="w-64 h-64 bg-white mx-auto mt-8 mb-3 flex items-center justify-center rounded-xl shadow border border-slate-100">
+          <img
+            src="./carol_lin_linkedin_qr.png"
+            alt="Carol Lin LinkedIn QR Code"
+            class="w-56 h-56 object-contain"
+          />
+        </div>
+        <p class="text-lg">Scan to connect</p>
+        <p class="text-base text-gray-500">Carol Lin</p>
+
+        <div class="takeaway fragment fade-in" data-fragment-index="99">
+          ✅ Takeaway：你可以問很小的問題（小問題常常才是最卡住的那個）。
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      transition: 'slide',
+      backgroundTransition: 'fade',
+    });
+  </script>
+</body>
+</html>
